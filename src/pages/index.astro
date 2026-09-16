@@ -1,11 +1,2325 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+const heroSlides = [
+  {
+    image: "/images/cbc-photo-01.jpg",
+    title: "Growing in Faith. Serving in Love. Reaching Communities.",
+    text: "Community Baptist Church South Sudan is a growing family of believers seeking to honour God, strengthen one another and serve communities with faith and compassion."
+  },
+  {
+    image: "/images/cbc-photo-02.jpg",
+    title: "A Church Family Rooted in Christ",
+    text: "We gather to worship, learn God's Word, pray together and encourage one another in the journey of faith."
+  },
+  {
+    image: "/images/cbc-photo-03.jpg",
+    title: "Faith That Serves",
+    text: "Our faith calls us beyond ourselves—to worship God, serve others and carry hope into our communities."
+  },
+  {
+    image: "/images/cbc-photo-04.jpg",
+    title: "Come and Worship With Us",
+    text: "There is a place for you among us. Come, worship with us and experience the fellowship of the CBC family."
+  },
+  {
+    image: "/images/cbc-photo-05.jpg",
+    title: "Together in God's Family",
+    text: "United by faith in Christ, we grow together through worship, fellowship, prayer and service."
+  },
+  {
+    image: "/images/cbc-photo-06.jpg",
+    title: "Serving Communities With Hope",
+    text: "CBC seeks to be a faithful presence in the communities we serve across the Bahr el Ghazal region."
+  },
+  {
+    image: "/images/cbc-photo-07.jpg",
+    title: "Nurturing the Next Generation",
+    text: "We invest in children and young people through teaching, fellowship and opportunities to grow in faith."
+  },
+  {
+    image: "/images/cbc-photo-08.jpg",
+    title: "A Place to Belong",
+    text: "Church is more than a building. It is a family where people can worship, grow, serve and walk together."
+  },
+  {
+    image: "/images/cbc-photo-09.jpg",
+    title: "God's Word at the Centre",
+    text: "Scripture guides our teaching, our worship and our desire to live faithfully as followers of Christ."
+  },
+  {
+    image: "/images/cbc-photo-10.jpg",
+    title: "Seeking God Together",
+    text: "Through prayer and fellowship, we seek God's wisdom, strength and direction for His church."
+  },
+  {
+    image: "/images/cbc-photo-11.jpg",
+    title: "Growing Through God's Word",
+    text: "Bible study gives us opportunity to learn, reflect and grow deeper in our understanding of God's Word."
+  },
+  {
+    image: "/images/cbc-photo-12.jpg",
+    title: "Equipped to Follow Christ",
+    text: "We desire to see believers strengthened in faith and equipped to live out the calling God has given them."
+  },
+  {
+    image: "/images/cbc-photo-13.jpg",
+    title: "A Community of Faith",
+    text: "CBC brings people together in worship, fellowship and service as one growing church family."
+  },
+  {
+    image: "/images/cbc-photo-14.jpg",
+    title: "Every Person Has a Place",
+    text: "We believe every believer can contribute to the life and mission of the church through faithful service."
+  },
+  {
+    image: "/images/cbc-photo-15.jpg",
+    title: "Looking to the Future With Faith",
+    text: "As CBC continues to grow, we look ahead with prayer, hope and confidence in God's leading."
+  },
+  {
+    image: "/images/cbc-photo-16.jpg",
+    title: "Celebrating God's Goodness",
+    text: "We celebrate the goodness of God through worship, fellowship, testimony and shared life."
+  },
+  {
+    image: "/images/cbc-photo-17.jpg",
+    title: "Let Your Light Shine",
+    text: "CBC desires to shine as a faithful witness of Christ in Aweil and among communities beyond."
+  }
+];
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const ministries = [
+  {
+    icon: "📖",
+    title: "Bible Study",
+    text: "We gather around God's Word to deepen our understanding of Scripture and grow in our walk with Christ."
+  },
+  {
+    icon: "👨‍👩‍👧",
+    title: "Sunday School",
+    text: "We create a nurturing environment where children can learn God's Word, build friendships and grow in faith."
+  },
+  {
+    icon: "🌱",
+    title: "Youth & Teens",
+    text: "We encourage young people to know Christ, discover their gifts and become faithful members of their communities."
+  },
+  {
+    icon: "❤️",
+    title: "Women's Fellowship",
+    text: "Women come together for fellowship, prayer, encouragement and opportunities to serve God and others."
+  },
+  {
+    icon: "🤝",
+    title: "Men's Fellowship",
+    text: "Men build Christian brotherhood through fellowship, prayer, encouragement and faithful service."
+  },
+  {
+    icon: "🙏",
+    title: "Prayer & Fasting",
+    text: "We seek God's presence and direction together, trusting Him for strength, wisdom and the future of His church."
+  }
+];
+
+const schedule = [
+  {
+    day: "Sunday",
+    activity: "Bible Study",
+    time: "7:00 AM – 8:00 AM"
+  },
+  {
+    day: "Sunday",
+    activity: "Main Service",
+    time: "8:00 AM – 11:00 AM"
+  },
+  {
+    day: "Monday",
+    activity: "Sunday School Fellowship",
+    time: "2:00 PM"
+  },
+  {
+    day: "Tuesday",
+    activity: "Women's Fellowship",
+    time: "2:00 PM"
+  },
+  {
+    day: "Wednesday",
+    activity: "Bible Study",
+    time: "4:30 PM – 6:00 PM"
+  },
+  {
+    day: "Thursday",
+    activity: "Men's Fellowship",
+    time: "5:00 PM – 6:00 PM"
+  },
+  {
+    day: "Friday",
+    activity: "Teens Fellowship",
+    time: "2:00 PM"
+  },
+  {
+    day: "Saturday",
+    activity: "Youth Rehearsal",
+    time: "2:00 PM"
+  }
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta
+      name="description"
+      content="Community Baptist Church South Sudan — a growing Christian church family serving Aweil and communities across the Bahr el Ghazal region."
+    />
+
+    <meta
+      name="keywords"
+      content="Community Baptist Church South Sudan, CBC South Sudan, Baptist Church Aweil, church Aweil, South Sudan church"
+    />
+
+    <meta
+      property="og:title"
+      content="Community Baptist Church South Sudan"
+    />
+
+    <meta
+      property="og:description"
+      content="Growing in faith, serving in love and reaching communities."
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <title>Community Baptist Church South Sudan</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/community-baptist-church-south-sudan-final-favicon.png"
+    />
+
+    <style>
+      :root {
+        --primary: #0b4f8a;
+        --primary-dark: #07385f;
+        --secondary: #f39c12;
+        --dark: #102a43;
+        --text: #435466;
+        --muted: #6b7b8c;
+        --light: #f5f8fb;
+        --white: #ffffff;
+        --border: #e5ebf1;
+        --shadow: 0 15px 40px rgba(16, 42, 67, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          Arial,
+          Helvetica,
+          sans-serif;
+        color: var(--text);
+        background: var(--white);
+        line-height: 1.75;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: min(1180px, 92%);
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        max-width: 800px;
+        margin: 0 auto 55px;
+        text-align: center;
+      }
+
+      .section-title span {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--secondary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+      }
+
+      .section-title h2 {
+        margin-bottom: 17px;
+        color: var(--dark);
+        font-size: clamp(2.15rem, 4vw, 3.2rem);
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+      }
+
+      .section-title p {
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      /* HEADER */
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 18px rgba(0, 0, 0, 0.07);
+      }
+
+      .nav {
+        min-height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-shrink: 0;
+      }
+
+      .brand img {
+        width: 66px;
+        height: 66px;
+        object-fit: contain;
+      }
+
+      .brand-text {
+        line-height: 1.2;
+      }
+
+      .brand-text strong {
+        display: block;
+        color: var(--primary);
+        font-size: 1.02rem;
+        font-weight: 800;
+      }
+
+      .brand-text small {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.75rem;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+      }
+
+      nav a {
+        color: var(--dark);
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: 0.25s ease;
+      }
+
+      nav a:hover {
+        color: var(--secondary);
+      }
+
+      .nav-donate {
+        padding: 10px 18px;
+        border-radius: 5px;
+        background: var(--primary);
+        color: white !important;
+      }
+
+      .nav-donate:hover {
+        background: var(--secondary);
+      }
+
+      /* HERO */
+
+      .hero {
+        position: relative;
+        min-height: 700px;
+        overflow: hidden;
+        background: #071d2d;
+      }
+
+      .hero-slide {
+        position: absolute;
+        inset: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition:
+          opacity 0.9s ease,
+          visibility 0.9s ease;
+      }
+
+      .hero-slide.active {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .hero-slide::before {
+        content: "";
+        position: absolute;
+        inset: -30px;
+        background-image: var(--hero-bg);
+        background-position: center;
+        background-size: cover;
+        filter: blur(15px);
+        transform: scale(1.08);
+        opacity: 0.42;
+      }
+
+      .hero-slide::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(4, 24, 42, 0.94) 0%,
+            rgba(4, 24, 42, 0.78) 42%,
+            rgba(4, 24, 42, 0.25) 100%
+          );
+      }
+
+      .hero-image {
+        position: absolute;
+        z-index: 1;
+        top: 3%;
+        right: 5%;
+        width: 53%;
+        height: 94%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero-slide.portrait .hero-image {
+        right: 5%;
+        width: 48%;
+        height: 94%;
+        object-fit: contain;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-copy {
+        width: 49%;
+        padding: 70px 0;
+        color: white;
+      }
+
+      .hero-copy span {
+        display: inline-block;
+        margin-bottom: 17px;
+        color: var(--secondary);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+      }
+
+      .hero-copy h1 {
+        margin-bottom: 25px;
+        color: white;
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        line-height: 1.04;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-copy p {
+        max-width: 600px;
+        margin-bottom: 31px;
+        color: rgba(255, 255, 255, 0.91);
+        font-size: 1.1rem;
+      }
+
+      .hero-scripture {
+        max-width: 520px;
+        margin-bottom: 28px;
+        padding-left: 18px;
+        border-left: 3px solid var(--secondary);
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.95rem;
+        font-style: italic;
+      }
+
+      .hero-scripture strong {
+        display: block;
+        margin-top: 5px;
+        color: var(--secondary);
+        font-size: 0.78rem;
+        font-style: normal;
+        letter-spacing: 0.5px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 23px;
+        border-radius: 5px;
+        font-weight: 800;
+        transition: 0.25s ease;
+      }
+
+      .btn-primary {
+        background: var(--secondary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #d88708;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        color: white;
+      }
+
+      .btn-outline:hover {
+        background: white;
+        color: var(--primary);
+      }
+
+      .hero-controls {
+        position: absolute;
+        z-index: 5;
+        bottom: 30px;
+        left: 4%;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      .hero-arrow {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.25);
+        color: white;
+        cursor: pointer;
+        font-size: 1.05rem;
+      }
+
+      .hero-arrow:hover {
+        border-color: var(--secondary);
+        background: var(--secondary);
+      }
+
+      .hero-dots {
+        display: flex;
+        gap: 7px;
+        margin-left: 8px;
+      }
+
+      .hero-dot {
+        width: 8px;
+        height: 8px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+      }
+
+      .hero-dot.active {
+        background: var(--secondary);
+        transform: scale(1.35);
+      }
+
+      /* STATS */
+
+      .welcome {
+        background: white;
+      }
+
+      .stats {
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: -55px;
+      }
+
+      .stat {
+        padding: 31px 20px;
+        border-radius: 8px;
+        background: white;
+        text-align: center;
+        box-shadow: var(--shadow);
+      }
+
+      .stat strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--primary);
+        font-size: 2.45rem;
+        line-height: 1.1;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      /* STORY */
+
+      .story {
+        background: var(--light);
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .story-image img {
+        width: 100%;
+        height: 530px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .story-content .eyebrow {
+        margin-bottom: 8px;
+        color: var(--secondary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .story-content h2 {
+        margin-bottom: 21px;
+        color: var(--dark);
+        font-size: clamp(2.1rem, 4vw, 3.1rem);
+        line-height: 1.15;
+      }
+
+      .story-content p {
+        margin-bottom: 18px;
+      }
+
+      .story-highlight {
+        margin: 27px 0;
+        padding: 17px 0 17px 20px;
+        border-left: 4px solid var(--secondary);
+        color: var(--dark);
+        font-size: 1.03rem;
+        font-weight: 700;
+      }
+
+      .scripture-box {
+        margin: 27px 0;
+        padding: 22px 24px;
+        border-radius: 7px;
+        background: white;
+        box-shadow: 0 7px 25px rgba(16, 42, 67, 0.06);
+      }
+
+      .scripture-box p {
+        margin: 0 0 5px;
+        color: var(--dark);
+        font-family: Georgia, serif;
+        font-size: 1.08rem;
+        font-style: italic;
+      }
+
+      .scripture-box strong {
+        color: var(--primary);
+        font-size: 0.82rem;
+      }
+
+      /* VIDEO */
+
+      .video-section {
+        background: white;
+      }
+
+      .church-video {
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+        background: #071d2d;
+        box-shadow: 0 22px 55px rgba(0, 0, 0, 0.24);
+      }
+
+      .church-video video {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 650px;
+        background: #000;
+      }
+
+      .video-caption {
+        max-width: 850px;
+        margin: 25px auto 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      /* MINISTRIES */
+
+      .ministries {
+        background: var(--light);
+      }
+
+      .ministry-intro {
+        max-width: 760px;
+        margin: -25px auto 45px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .ministry-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .ministry-card {
+        padding: 34px 28px;
+        border-top: 3px solid transparent;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 7px 25px rgba(16, 42, 67, 0.07);
+        transition: 0.25s ease;
+      }
+
+      .ministry-card:hover {
+        border-top-color: var(--secondary);
+        transform: translateY(-5px);
+        box-shadow: var(--shadow);
+      }
+
+      .ministry-icon {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        background: #edf5fb;
+        font-size: 1.45rem;
+      }
+
+      .ministry-card h3 {
+        margin-bottom: 9px;
+        color: var(--dark);
+        font-size: 1.2rem;
+      }
+
+      .ministry-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      /* PASTOR */
+
+      .pastor {
+        background: white;
+      }
+
+      .pastor-grid {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 390px 1fr;
+        gap: 60px;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      .pastor-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .pastor-content .eyebrow {
+        color: var(--secondary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .pastor-content h2 {
+        margin: 7px 0 4px;
+        color: var(--dark);
+        font-size: 2.55rem;
+        line-height: 1.15;
+      }
+
+      .pastor-role {
+        margin-bottom: 22px;
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .pastor-content p {
+        margin-bottom: 16px;
+      }
+
+      .qualification {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border-left: 4px solid var(--primary);
+        background: var(--light);
+      }
+
+      .qualification strong {
+        display: block;
+        color: var(--dark);
+      }
+
+      /* FAMILY */
+
+      .family {
+        background: var(--primary);
+        color: white;
+      }
+
+      .family .section-title span {
+        color: var(--secondary);
+      }
+
+      .family .section-title h2,
+      .family .section-title p {
+        color: white;
+      }
+
+      .family-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .family-card {
+        padding: 37px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .family-card strong {
+        display: block;
+        margin-bottom: 3px;
+        color: var(--secondary);
+        font-size: 2.5rem;
+        line-height: 1.1;
+      }
+
+      .family-card h3 {
+        margin-bottom: 10px;
+        color: white;
+        font-size: 1.3rem;
+      }
+
+      .family-card p {
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .family-scripture {
+        max-width: 750px;
+        margin: 40px auto 0;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.92);
+        font-family: Georgia, serif;
+        font-size: 1.15rem;
+        font-style: italic;
+      }
+
+      .family-scripture strong {
+        display: block;
+        margin-top: 6px;
+        color: var(--secondary);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
+      }
+
+      /* CHILDREN */
+
+      .children {
+        background: var(--light);
+      }
+
+      .children-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 55px;
+        align-items: center;
+      }
+
+      .children-image img {
+        width: 100%;
+        height: 460px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .children-content h2 {
+        margin-bottom: 18px;
+        color: var(--dark);
+        font-size: 2.6rem;
+        line-height: 1.15;
+      }
+
+      .children-content p {
+        margin-bottom: 17px;
+      }
+
+      .children-scripture {
+        margin: 24px 0;
+        padding: 20px 22px;
+        border-radius: 7px;
+        background: white;
+        box-shadow: 0 7px 25px rgba(16, 42, 67, 0.06);
+      }
+
+      .children-scripture p {
+        margin: 0 0 5px;
+        color: var(--dark);
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+
+      .children-scripture strong {
+        color: var(--primary);
+        font-size: 0.8rem;
+      }
+
+      /* SCHEDULE */
+
+      .schedule {
+        background: white;
+      }
+
+      .schedule-table {
+        max-width: 950px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+
+      .schedule-row {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr 1fr;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .schedule-row:last-child {
+        border-bottom: 0;
+      }
+
+      .schedule-row > div {
+        padding: 17px 20px;
+      }
+
+      .schedule-head {
+        background: var(--primary);
+        color: white;
+        font-weight: 800;
+      }
+
+      .schedule-row:not(.schedule-head):nth-child(even) {
+        background: var(--light);
+      }
+
+      .schedule-row:not(.schedule-head) > div:first-child {
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .schedule-note {
+        max-width: 750px;
+        margin: 30px auto 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      /* GALLERY */
+
+      .gallery {
+        background: var(--light);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .gallery-item {
+        height: 225px;
+        overflow: hidden;
+        border-radius: 6px;
+        background: #ddd;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      /* CONTACT */
+
+      .contact {
+        background:
+          linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+          );
+        color: white;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .contact .eyebrow {
+        margin-bottom: 9px;
+        color: var(--secondary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .contact h2 {
+        margin-bottom: 18px;
+        color: white;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        line-height: 1.15;
+      }
+
+      .contact p {
+        margin-bottom: 18px;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .contact-scripture {
+        margin: 25px 0;
+        padding-left: 18px;
+        border-left: 3px solid var(--secondary);
+        color: rgba(255, 255, 255, 0.93);
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+
+      .contact-scripture strong {
+        display: block;
+        margin-top: 5px;
+        color: var(--secondary);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
+      }
+
+      .contact-details {
+        display: grid;
+        gap: 17px;
+      }
+
+      .contact-detail {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+
+      .contact-detail > div:first-child {
+        font-size: 1.15rem;
+      }
+
+      .contact-detail strong {
+        display: block;
+        color: white;
+      }
+
+      .contact-detail span {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .contact-link {
+        color: var(--secondary);
+        font-weight: 700;
+      }
+
+      .contact-link:hover {
+        text-decoration: underline;
+      }
+
+      /* FOOTER */
+
+      footer {
+        padding: 55px 0 25px;
+        background: #061a29;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 50px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-brand {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+
+      .footer-brand img {
+        width: 67px;
+        height: 67px;
+        object-fit: contain;
+      }
+
+      footer h3 {
+        margin-bottom: 14px;
+        color: white;
+      }
+
+      footer p {
+        margin-bottom: 12px;
+      }
+
+      .footer-links {
+        display: grid;
+        gap: 8px;
+      }
+
+      .footer-links a:hover {
+        color: var(--secondary);
+      }
+
+      .copyright {
+        padding-top: 22px;
+        text-align: center;
+        font-size: 0.83rem;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 1050px) {
+        nav {
+          gap: 13px;
+        }
+
+        nav a {
+          font-size: 0.8rem;
+        }
+
+        .hero-copy {
+          width: 53%;
+        }
+
+        .hero-image {
+          width: 50%;
+        }
+
+        .ministry-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .section {
+          padding: 75px 0;
+        }
+
+        header {
+          position: relative;
+        }
+
+        .nav {
+          min-height: auto;
+          padding: 12px 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        nav {
+          width: 100%;
+          gap: 17px;
+          overflow-x: auto;
+          padding-bottom: 5px;
+        }
+
+        nav a {
+          white-space: nowrap;
+        }
+
+        .hero {
+          min-height: 760px;
+        }
+
+        .hero-content {
+          min-height: 760px;
+          align-items: flex-end;
+        }
+
+        .hero-slide::after {
+          background:
+            linear-gradient(
+              180deg,
+              rgba(4, 24, 42, 0.12) 0%,
+              rgba(4, 24, 42, 0.5) 40%,
+              rgba(4, 24, 42, 0.95) 70%,
+              rgba(4, 24, 42, 0.98) 100%
+            );
+        }
+
+        .hero-image,
+        .hero-slide.portrait .hero-image {
+          top: 3%;
+          left: 12%;
+          right: auto;
+          width: 76%;
+          height: 54%;
+          object-fit: contain;
+          box-shadow: none;
+        }
+
+        .hero-copy {
+          width: 100%;
+          padding: 35px 0 90px;
+        }
+
+        .hero-copy h1 {
+          font-size: 2.55rem;
+        }
+
+        .hero-copy p {
+          font-size: 1rem;
+        }
+
+        .hero-scripture {
+          font-size: 0.88rem;
+        }
+
+        .stats {
+          grid-template-columns: repeat(2, 1fr);
+          margin-top: 25px;
+        }
+
+        .story-grid,
+        .pastor-grid,
+        .children-grid,
+        .contact-grid,
+        .family-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .story-grid {
+          gap: 45px;
+        }
+
+        .story-image img {
+          height: 390px;
+        }
+
+        .pastor-image {
+          max-width: 430px;
+          margin: 0 auto;
+        }
+
+        .pastor-image img {
+          height: 450px;
+        }
+
+        .children-image img {
+          height: 360px;
+        }
+
+        .ministry-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery-item {
+          height: 190px;
+        }
+
+        .schedule-row {
+          grid-template-columns: 1fr;
+          padding: 9px 0;
+        }
+
+        .schedule-head {
+          display: none;
+        }
+
+        .schedule-row > div {
+          padding: 5px 18px;
+        }
+
+        .schedule-row:not(.schedule-head) > div:first-child {
+          padding-top: 12px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .brand img {
+          width: 54px;
+          height: 54px;
+        }
+
+        .brand-text strong {
+          font-size: 0.92rem;
+        }
+
+        .brand-text small {
+          font-size: 0.68rem;
+        }
+
+        .hero {
+          min-height: 730px;
+        }
+
+        .hero-content {
+          min-height: 730px;
+        }
+
+        .hero-image,
+        .hero-slide.portrait .hero-image {
+          height: 50%;
+          top: 2%;
+        }
+
+        .hero-copy {
+          padding-bottom: 85px;
+        }
+
+        .hero-copy h1 {
+          font-size: 2.18rem;
+        }
+
+        .stats {
+          gap: 10px;
+        }
+
+        .stat {
+          padding: 22px 10px;
+        }
+
+        .stat strong {
+          font-size: 1.8rem;
+        }
+
+        .gallery-grid {
+          gap: 8px;
+        }
+
+        .gallery-item {
+          height: 160px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+
+    <header>
+      <div class="container nav">
+
+        <a href="/" class="brand">
+
+          <img
+            src="/images/community-baptist-church-south-sudan-final-logo.png"
+            alt="Community Baptist Church South Sudan logo"
+          />
+
+          <div class="brand-text">
+            <strong>Community Baptist Church</strong>
+            <small>South Sudan</small>
+          </div>
+
+        </a>
+
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#ministries">Ministries</a>
+          <a href="#pastor">Pastor</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-donate">Support Us</a>
+        </nav>
+
+      </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+      {heroSlides.map((slide, index) => (
+        <div
+          class={`hero-slide ${index === 0 ? "active" : ""} ${
+            [3, 8, 10, 11, 12, 15, 16].includes(index)
+              ? "portrait"
+              : ""
+          }`}
+          style={`--hero-bg: url('${slide.image}')`}
+          data-slide={index}
+        >
+
+          <img
+            class="hero-image"
+            src={slide.image}
+            alt={slide.title}
+            loading="eager"
+          />
+
+          <div class="container hero-content">
+
+            <div class="hero-copy">
+
+              <span>Community Baptist Church South Sudan</span>
+
+              <h1>{slide.title}</h1>
+
+              <p>{slide.text}</p>
+
+              {index === 0 && (
+                <div class="hero-scripture">
+                  “Ye are the light of the world.”
+                  <strong>Matthew 5:14</strong>
+                </div>
+              )}
+
+              <div class="hero-buttons">
+
+                <a href="#about" class="btn btn-primary">
+                  Discover Our Story
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                  Worship With Us
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+
+      <div class="hero-controls">
+
+        <button
+          class="hero-arrow"
+          id="prevSlide"
+          aria-label="Previous slide"
+        >
+          ←
+        </button>
+
+        <button
+          class="hero-arrow"
+          id="nextSlide"
+          aria-label="Next slide"
+        >
+          →
+        </button>
+
+        <div class="hero-dots">
+
+          {heroSlides.map((_, index) => (
+            <button
+              class={`hero-dot ${index === 0 ? "active" : ""}`}
+              data-dot={index}
+              aria-label={`Go to slide ${index + 1}`}
+            ></button>
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="welcome">
+
+      <div class="container">
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>2014</strong>
+            <span>Church Founded</span>
+          </div>
+
+          <div class="stat">
+            <strong>500</strong>
+            <span>Church Members</span>
+          </div>
+
+          <div class="stat">
+            <strong>26</strong>
+            <span>Sister Churches</span>
+          </div>
+
+          <div class="stat">
+            <strong>100</strong>
+            <span>Churches — Our Vision</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OUR STORY -->
+
+    <section class="story section" id="about">
+
+      <div class="container">
+
+        <div class="story-grid">
+
+          <div class="story-image">
+
+            <img
+              src="/images/cbc-photo-01.jpg"
+              alt="Community Baptist Church South Sudan"
+            />
+
+          </div>
+
+          <div class="story-content">
+
+            <div class="eyebrow">Our Story</div>
+
+            <h2>From a Home Cell to a Growing Church Family</h2>
+
+            <p>
+              Community Baptist Church South Sudan began on
+              <strong>23 November 2014</strong>, when Pastor David Lual
+              Mawien started a home cell in Ayaung village, Aweil,
+              Northern Bahr el Ghazal State.
+            </p>
+
+            <p>
+              What began as a small gathering of believers has, by God's
+              grace, grown into a church family of approximately
+              <strong>500 members</strong>.
+            </p>
+
+            <div class="story-highlight">
+              From a home cell in Ayaung to a growing family of believers
+              serving communities across the Bahr el Ghazal region.
+            </div>
+
+            <p>
+              CBC's journey has also extended beyond its original
+              congregation. Through the ministry, <strong>26 sister
+              churches</strong> have been established, carrying the
+              fellowship and witness of the church into other communities.
+            </p>
+
+            <p>
+              As we look ahead, CBC carries a vision to reach
+              <strong>100 churches in the next 10 years</strong>, trusting
+              God for wisdom, strength and faithful people to serve His
+              purposes.
+            </p>
+
+            <div class="scripture-box">
+
+              <p>
+                “Except the LORD build the house, they labour in vain that
+                build it.”
+              </p>
+
+              <strong>Psalm 127:1</strong>
+
+            </div>
+
+            <a href="#ministries" class="btn btn-primary">
+              Explore Our Ministries
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="video-section section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Experience CBC</span>
+
+          <h2>Come Worship With Us</h2>
+
+          <p>
+            Take a glimpse of worship and fellowship among the CBC church
+            family in Aweil.
+          </p>
+
+        </div>
+
+        <div class="church-video">
+
+          <video
+            controls
+            preload="metadata"
+            playsinline
+            poster="/images/cbc-photo-01.jpg"
+          >
+
+            <source
+              src="/videos/cbc-church-service.mp4"
+              type="video/mp4"
+            />
+
+            Your browser does not support the video element.
+
+          </video>
+
+        </div>
+
+        <p class="video-caption">
+          “O come, let us sing unto the LORD: let us make a joyful noise
+          to the rock of our salvation.”
+          <strong>Psalm 95:1</strong>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- MINISTRIES -->
+
+    <section class="ministries section" id="ministries">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Growing Together</span>
+
+          <h2>Our Ministries</h2>
+
+          <p>
+            At CBC, church is more than a Sunday gathering. We create
+            opportunities for people of different ages to worship, learn,
+            pray, fellowship and serve.
+          </p>
+
+        </div>
+
+        <p class="ministry-intro">
+          Through God's Word, Christian fellowship and prayer, we seek to
+          build a church family that grows together and serves faithfully.
+        </p>
+
+        <div class="ministry-grid">
+
+          {ministries.map((ministry) => (
+
+            <div class="ministry-card">
+
+              <div class="ministry-icon">
+                {ministry.icon}
+              </div>
+
+              <h3>{ministry.title}</h3>
+
+              <p>{ministry.text}</p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PASTOR -->
+
+    <section class="pastor section" id="pastor">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Church Leadership</span>
+
+          <h2>Meet Our Pastor</h2>
+
+          <p>
+            Serving God's people through the ministry of His Word,
+            fellowship and Christian leadership.
+          </p>
+
+        </div>
+
+        <div class="pastor-grid">
+
+          <div class="pastor-image">
+
+            <img
+              src="/images/cbc-photo-03.jpg"
+              alt="Pastor David Lual Mawien"
+            />
+
+          </div>
+
+          <div class="pastor-content">
+
+            <div class="eyebrow">Senior Pastor</div>
+
+            <h2>David Lual Mawien</h2>
+
+            <div class="pastor-role">
+              Pastor, Community Baptist Church South Sudan
+            </div>
+
+            <p>
+              Pastor David Lual Mawien is the founder and pastor of
+              Community Baptist Church South Sudan.
+            </p>
+
+            <p>
+              He became a pastor in <strong>2011</strong> and holds a
+              Bachelor's degree in Theology from
+              <strong>Global Theological Seminary</strong>.
+            </p>
+
+            <p>
+              Pastor David also leads <strong>Community Network
+              Ministries</strong>. Since the beginning of CBC in 2014, he
+              has continued to lead the church as it grows in Aweil and
+              extends its ministry through sister churches.
+            </p>
+
+            <div class="qualification">
+
+              <strong>Bachelor's Degree in Theology</strong>
+
+              Global Theological Seminary
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHURCH FAMILY -->
+
+    <section class="family section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>A Growing Family</span>
+
+          <h2>One Church Family, Many Communities</h2>
+
+          <p>
+            The story of CBC is a story of faith, fellowship, multiplication
+            and a continuing desire to reach more communities.
+          </p>
+
+        </div>
+
+        <div class="family-grid">
+
+          <div class="family-card">
+
+            <strong>26</strong>
+
+            <h3>Sister Churches</h3>
+
+            <p>
+              What began in Ayaung has grown beyond one congregation.
+              CBC has helped establish 26 sister churches as the ministry
+              has expanded into other communities.
+            </p>
+
+          </div>
+
+          <div class="family-card">
+
+            <strong>100</strong>
+
+            <h3>A Vision for the Next 10 Years</h3>
+
+            <p>
+              CBC looks toward the coming years with a vision to reach
+              100 churches, trusting God to guide and strengthen the work
+              ahead.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="family-scripture">
+
+          “How good and pleasant it is when God's people live together
+          in unity!”
+
+          <strong>Psalm 133:1</strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHILDREN & YOUNG PEOPLE -->
+
+    <section class="children section">
+
+      <div class="container">
+
+        <div class="children-grid">
+
+          <div class="children-image">
+
+            <img
+              src="/images/cbc-photo-07.jpg"
+              alt="Children and young people at Community Baptist Church South Sudan"
+            />
+
+          </div>
+
+          <div class="children-content">
+
+            <div class="section-title" style="text-align:left; margin:0 0 25px;">
+
+              <span>The Next Generation</span>
+
+              <h2>Children & Young People</h2>
+
+            </div>
+
+            <p>
+              Children and young people are an important part of the CBC
+              family. We want them to have opportunities to learn, grow,
+              worship and develop their relationship with Christ.
+            </p>
+
+            <p>
+              Through Sunday School, teenagers' fellowship and youth
+              activities, we encourage the younger generation to discover
+              their gifts, build healthy Christian relationships and take
+              their place in the life of the church.
+            </p>
+
+            <div class="children-scripture">
+
+              <p>
+                “Train up a child in the way he should go: and when he is
+                old, he will not depart from it.”
+              </p>
+
+              <strong>Proverbs 22:6</strong>
+
+            </div>
+
+            <a href="#schedule" class="btn btn-primary">
+              See Our Weekly Programme
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WEEKLY PROGRAMME -->
+
+    <section class="schedule section" id="schedule">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Join Us</span>
+
+          <h2>Weekly Programme</h2>
+
+          <p>
+            We welcome you to join us throughout the week for worship,
+            Bible study, prayer, fellowship and activities for different
+            groups within our church family.
+          </p>
+
+        </div>
+
+        <div class="schedule-table">
+
+          <div class="schedule-row schedule-head">
+
+            <div>Day</div>
+            <div>Activity</div>
+            <div>Time</div>
+
+          </div>
+
+          {schedule.map((item) => (
+
+            <div class="schedule-row">
+
+              <div>{item.day}</div>
+
+              <div>{item.activity}</div>
+
+              <div>{item.time}</div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <p class="schedule-note">
+          “Let us consider one another to provoke unto love and to good
+          works: not forsaking the assembling of ourselves together.”
+          <strong>Hebrews 10:24–25</strong>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery section" id="gallery">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Life at CBC</span>
+
+          <h2>Our Church Family</h2>
+
+          <p>
+            Moments of worship, fellowship, teaching and service from
+            Community Baptist Church South Sudan.
+          </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+          {heroSlides.map((slide, index) => (
+
+            <div class="gallery-item">
+
+              <img
+                src={slide.image}
+                alt={`Community Baptist Church South Sudan — photo ${index + 1}`}
+                loading="lazy"
+              />
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div>
+
+            <div class="eyebrow">You Are Welcome Here</div>
+
+            <h2>Come and Worship With Us</h2>
+
+            <p>
+              Whether you are looking for a church family, seeking God's
+              direction, or simply longing for a place to worship and
+              fellowship, Community Baptist Church South Sudan welcomes
+              you.
+            </p>
+
+            <p>
+              Come as you are. Worship with us. Grow with us. Serve with us.
+            </p>
+
+            <div class="contact-scripture">
+
+              “Let us not be weary in well doing: for in due season we
+              shall reap, if we faint not.”
+
+              <strong>Galatians 6:9</strong>
+
+            </div>
+
+            <a
+              href="https://wa.me/211919143231"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Contact Us on WhatsApp
+            </a>
+
+          </div>
+
+          <div class="contact-details">
+
+            <div class="contact-detail">
+
+              <div>📍</div>
+
+              <div>
+
+                <strong>Church Location</strong>
+
+                <span>
+                  Aweil Town, Northern Bahr el Ghazal State, South Sudan
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="contact-detail">
+
+              <div>📮</div>
+
+              <div>
+
+                <strong>Postal Address</strong>
+
+                <span>Ayaung</span>
+
+              </div>
+
+            </div>
+
+            <div class="contact-detail">
+
+              <div>📱</div>
+
+              <div>
+
+                <strong>WhatsApp</strong>
+
+                <a
+                  href="https://wa.me/211919143231"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                >
+                  +211 919 143 231
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="contact-detail">
+
+              <div>📘</div>
+
+              <div>
+
+                <strong>Facebook</strong>
+
+                <span>Community Baptist Church</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <div class="container">
+
+        <div class="footer-grid">
+
+          <div>
+
+            <div class="footer-brand">
+
+              <img
+                src="/images/community-baptist-church-south-sudan-final-logo.png"
+                alt="Community Baptist Church South Sudan logo"
+              />
+
+              <div>
+
+                <h3>Community Baptist Church</h3>
+
+                <p>South Sudan</p>
+
+              </div>
+
+            </div>
+
+            <p style="margin-top:20px;">
+              Growing in faith, serving in love and reaching communities
+              from Aweil and beyond.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <h3>Explore CBC</h3>
+
+            <div class="footer-links">
+
+              <a href="#about">Our Story</a>
+              <a href="#ministries">Ministries</a>
+              <a href="#pastor">Our Pastor</a>
+              <a href="#schedule">Weekly Programme</a>
+              <a href="#gallery">Gallery</a>
+              <a href="#contact">Contact Us</a>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <h3>Visit Us</h3>
+
+            <p>
+              Aweil Town<br />
+              Northern Bahr el Ghazal State<br />
+              South Sudan
+            </p>
+
+            <p>
+              WhatsApp:
+              <a
+                href="https://wa.me/211919143231"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+              >
+                +211 919 143 231
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="copyright">
+
+          © {new Date().getFullYear()} Community Baptist Church South Sudan.
+          All Rights Reserved.
+
+        </div>
+
+      </div>
+
+    </footer>
+
+
+    <!-- HERO SLIDER -->
+
+    <script>
+      const slides = document.querySelectorAll(".hero-slide");
+      const dots = document.querySelectorAll(".hero-dot");
+      const nextButton = document.getElementById("nextSlide");
+      const prevButton = document.getElementById("prevSlide");
+
+      let currentSlide = 0;
+      let slideTimer;
+
+      function showSlide(index) {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        dots.forEach((dot) => {
+          dot.classList.remove("active");
+        });
+
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add("active");
+        dots[currentSlide].classList.add("active");
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+        restartTimer();
+      }
+
+      function previousSlide() {
+        showSlide(currentSlide - 1);
+        restartTimer();
+      }
+
+      function startTimer() {
+        slideTimer = setInterval(() => {
+          showSlide(currentSlide + 1);
+        }, 7000);
+      }
+
+      function restartTimer() {
+        clearInterval(slideTimer);
+        startTimer();
+      }
+
+      nextButton?.addEventListener("click", nextSlide);
+      prevButton?.addEventListener("click", previousSlide);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const index = Number(dot.dataset.dot);
+          showSlide(index);
+          restartTimer();
+        });
+      });
+
+      startTimer();
+    </script>
+
+  </body>
+</html>
