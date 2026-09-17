@@ -1,64 +1,66 @@
 ---
+import Header from "../components/Header.astro";
+
 const heroSlides = [
   {
     image: "/images/cbc-photo-01.jpg",
     title: "Growing in Faith. Serving in Love. Reaching Communities.",
-    text: "Community Baptist Church South Sudan is a growing family of believers seeking to honour God, strengthen one another and serve communities with faith and compassion."
+    text: "Community Baptist Church South Sudan is a people brought together by God to love and serve in His name, growing through His Word and reaching beyond our walls."
   },
   {
     image: "/images/cbc-photo-02.jpg",
     title: "A Church Family Rooted in Christ",
-    text: "We gather to worship, learn God's Word, pray together and encourage one another in the journey of faith."
+    text: "We gather to worship, learn God's Word, pray together and encourage one another as we follow Christ."
   },
   {
     image: "/images/cbc-photo-03.jpg",
-    title: "Faith That Serves",
-    text: "Our faith calls us beyond ourselves—to worship God, serve others and carry hope into our communities."
+    title: "Faith That Reaches Beyond the Church",
+    text: "Our calling takes us into our neighborhoods and surrounding communities, sharing the truth of Jesus Christ and serving others in His name."
   },
   {
     image: "/images/cbc-photo-04.jpg",
     title: "Come and Worship With Us",
-    text: "There is a place for you among us. Come, worship with us and experience the fellowship of the CBC family."
+    text: "There is a place for you among us. Come worship, fellowship and grow with the CBC family."
   },
   {
     image: "/images/cbc-photo-05.jpg",
     title: "Together in God's Family",
-    text: "United by faith in Christ, we grow together through worship, fellowship, prayer and service."
+    text: "United in Christ, we encourage one another, carry one another's burdens and serve together for God's glory."
   },
   {
     image: "/images/cbc-photo-06.jpg",
     title: "Serving Communities With Hope",
-    text: "CBC seeks to be a faithful presence in the communities we serve across the Bahr el Ghazal region."
+    text: "CBC desires to be a faithful presence in Aweil and in communities across South Sudan, carrying the hope of Christ wherever God opens a door."
   },
   {
     image: "/images/cbc-photo-07.jpg",
     title: "Nurturing the Next Generation",
-    text: "We invest in children and young people through teaching, fellowship and opportunities to grow in faith."
+    text: "Children and young people are part of the Church today. We desire to see them know Christ, grow in His Word and discover their gifts."
   },
   {
     image: "/images/cbc-photo-08.jpg",
     title: "A Place to Belong",
-    text: "Church is more than a building. It is a family where people can worship, grow, serve and walk together."
+    text: "Church is more than a building. It is a family where people can worship, learn, serve and walk together in faith."
   },
   {
     image: "/images/cbc-photo-09.jpg",
     title: "God's Word at the Centre",
-    text: "Scripture guides our teaching, our worship and our desire to live faithfully as followers of Christ."
+    text: "We believe the teaching and communication of the Bible are foundational to individual and church growth."
   },
   {
     image: "/images/cbc-photo-10.jpg",
     title: "Seeking God Together",
-    text: "Through prayer and fellowship, we seek God's wisdom, strength and direction for His church."
+    text: "Through prayer and fellowship, we seek God's wisdom, strength, protection and direction for His people."
   },
   {
     image: "/images/cbc-photo-11.jpg",
     title: "Growing Through God's Word",
-    text: "Bible study gives us opportunity to learn, reflect and grow deeper in our understanding of God's Word."
+    text: "Bible study gives us an opportunity to learn, reflect and grow deeper in our knowledge of God's Word."
   },
   {
     image: "/images/cbc-photo-12.jpg",
     title: "Equipped to Follow Christ",
-    text: "We desire to see believers strengthened in faith and equipped to live out the calling God has given them."
+    text: "We desire to see believers strengthened in faith and equipped to serve faithfully wherever God has placed them."
   },
   {
     image: "/images/cbc-photo-13.jpg",
@@ -68,7 +70,7 @@ const heroSlides = [
   {
     image: "/images/cbc-photo-14.jpg",
     title: "Every Person Has a Place",
-    text: "We believe every believer can contribute to the life and mission of the church through faithful service."
+    text: "We believe every believer can contribute to the life and mission of the Church through faithful service."
   },
   {
     image: "/images/cbc-photo-15.jpg",
@@ -78,12 +80,12 @@ const heroSlides = [
   {
     image: "/images/cbc-photo-16.jpg",
     title: "Celebrating God's Goodness",
-    text: "We celebrate the goodness of God through worship, fellowship, testimony and shared life."
+    text: "We celebrate God's goodness through worship, fellowship, testimony and shared life."
   },
   {
     image: "/images/cbc-photo-17.jpg",
     title: "Let Your Light Shine",
-    text: "CBC desires to shine as a faithful witness of Christ in Aweil and among communities beyond."
+    text: "CBC desires to shine as a faithful witness of Christ in Aweil, throughout South Sudan and beyond."
   }
 ];
 
@@ -91,22 +93,22 @@ const ministries = [
   {
     icon: "📖",
     title: "Bible Study",
-    text: "We gather around God's Word to deepen our understanding of Scripture and grow in our walk with Christ."
+    text: "We gather around God's Word because Scripture shapes our faith, strengthens our understanding and guides the life of the Church."
   },
   {
-    icon: "👨‍👩‍👧",
-    title: "Sunday School",
-    text: "We create a nurturing environment where children can learn God's Word, build friendships and grow in faith."
+    icon: "🙏",
+    title: "Prayer",
+    text: "We come before God together, seeking His wisdom, protection, healing, guidance and strength for our lives and ministry."
   },
   {
     icon: "🌱",
     title: "Youth & Teens",
-    text: "We encourage young people to know Christ, discover their gifts and become faithful members of their communities."
+    text: "We encourage young people to know Christ, discover their gifts and become faithful servants in the Church and their communities."
   },
   {
     icon: "❤️",
     title: "Women's Fellowship",
-    text: "Women come together for fellowship, prayer, encouragement and opportunities to serve God and others."
+    text: "Women gather for fellowship, prayer, encouragement and opportunities to strengthen one another and serve God's purposes."
   },
   {
     icon: "🤝",
@@ -114,9 +116,32 @@ const ministries = [
     text: "Men build Christian brotherhood through fellowship, prayer, encouragement and faithful service."
   },
   {
-    icon: "🙏",
-    title: "Prayer & Fasting",
-    text: "We seek God's presence and direction together, trusting Him for strength, wisdom and the future of His church."
+    icon: "👨‍👩‍👧",
+    title: "Sunday School",
+    text: "Children receive age-appropriate teaching and fellowship designed to help them grow in their knowledge and love of Christ."
+  }
+];
+
+const ministryFocus = [
+  {
+    icon: "✝",
+    title: "Sharing Christ",
+    text: "We desire to make the truth of Jesus Christ known in our neighborhoods, surrounding communities and beyond."
+  },
+  {
+    icon: "📖",
+    title: "Making Disciples",
+    text: "We teach God's Word and encourage believers to grow in spiritual maturity and become faithful followers of Christ."
+  },
+  {
+    icon: "🌍",
+    title: "Reaching Communities",
+    text: "We seek opportunities for evangelism, counseling, prayer and practical engagement with the communities around us."
+  },
+  {
+    icon: "⛪",
+    title: "Planting Churches",
+    text: "As God opens doors, we desire to establish and strengthen churches so that more communities can hear the Gospel."
   }
 ];
 
@@ -162,6 +187,34 @@ const schedule = [
     time: "2:00 PM"
   }
 ];
+
+const profilePhotos = [
+  {
+    image: "/images/cbc-profile-photo-02.jpg",
+    title: "A Growing Community",
+    text: "People gathered together in fellowship and shared life."
+  },
+  {
+    image: "/images/cbc-profile-photo-03.jpg",
+    title: "Worship and the Word",
+    text: "Biblical teaching remains central to the life of CBC."
+  },
+  {
+    image: "/images/cbc-profile-photo-04.jpg",
+    title: "Youth and Fellowship",
+    text: "Young people are an important part of the life and future of the Church."
+  },
+  {
+    image: "/images/cbc-profile-photo-05.jpg",
+    title: "Children and the Next Generation",
+    text: "We desire to nurture children in faith, knowledge and Christian character."
+  },
+  {
+    image: "/images/cbc-profile-photo-06.jpg",
+    title: "Reaching the Community",
+    text: "The Church seeks to carry the message of Christ beyond its walls."
+  }
+];
 ---
 
 <!doctype html>
@@ -172,12 +225,12 @@ const schedule = [
 
     <meta
       name="description"
-      content="Community Baptist Church South Sudan — a growing Christian church family serving Aweil and communities across the Bahr el Ghazal region."
+      content="Community Baptist Church South Sudan — a growing Christian church family in Aweil, rooted in God's Word, committed to sharing Christ, making disciples, serving communities and reaching South Sudan and beyond."
     />
 
     <meta
       name="keywords"
-      content="Community Baptist Church South Sudan, CBC South Sudan, Baptist Church Aweil, church Aweil, South Sudan church"
+      content="Community Baptist Church South Sudan, CBC South Sudan, Baptist Church Aweil, church Aweil, South Sudan church, Christian church Aweil"
     />
 
     <meta
@@ -187,13 +240,10 @@ const schedule = [
 
     <meta
       property="og:description"
-      content="Growing in faith, serving in love and reaching communities."
+      content="Growing in faith, serving in love and reaching communities for the glory of Christ."
     />
 
-    <meta
-      property="og:type"
-      content="website"
-    />
+    <meta property="og:type" content="website" />
 
     <title>Community Baptist Church South Sudan</title>
 
@@ -214,6 +264,7 @@ const schedule = [
         --light: #f5f8fb;
         --white: #ffffff;
         --border: #e5ebf1;
+        --soft-blue: #edf5fb;
         --shadow: 0 15px 40px rgba(16, 42, 67, 0.1);
       }
 
@@ -228,10 +279,7 @@ const schedule = [
       }
 
       body {
-        font-family:
-          Arial,
-          Helvetica,
-          sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: var(--text);
         background: var(--white);
         line-height: 1.75;
@@ -253,10 +301,15 @@ const schedule = [
 
       .section {
         padding: 100px 0;
+        scroll-margin-top: 105px;
+      }
+
+      .anchor-target {
+        scroll-margin-top: 105px;
       }
 
       .section-title {
-        max-width: 800px;
+        max-width: 820px;
         margin: 0 auto 55px;
         text-align: center;
       }
@@ -284,81 +337,34 @@ const schedule = [
         font-size: 1.04rem;
       }
 
-      /* HEADER */
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 2px 18px rgba(0, 0, 0, 0.07);
-      }
-
-      .nav {
-        min-height: 86px;
-        display: flex;
+      .btn {
+        display: inline-flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex-shrink: 0;
-      }
-
-      .brand img {
-        width: 66px;
-        height: 66px;
-        object-fit: contain;
-      }
-
-      .brand-text {
-        line-height: 1.2;
-      }
-
-      .brand-text strong {
-        display: block;
-        color: var(--primary);
-        font-size: 1.02rem;
+        justify-content: center;
+        padding: 13px 23px;
+        border-radius: 5px;
         font-weight: 800;
-      }
-
-      .brand-text small {
-        display: block;
-        margin-top: 4px;
-        color: var(--muted);
-        font-size: 0.75rem;
-      }
-
-      nav {
-        display: flex;
-        align-items: center;
-        gap: 23px;
-      }
-
-      nav a {
-        color: var(--dark);
-        font-size: 0.9rem;
-        font-weight: 700;
         transition: 0.25s ease;
       }
 
-      nav a:hover {
-        color: var(--secondary);
-      }
-
-      .nav-donate {
-        padding: 10px 18px;
-        border-radius: 5px;
-        background: var(--primary);
-        color: white !important;
-      }
-
-      .nav-donate:hover {
+      .btn-primary {
         background: var(--secondary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #d88708;
+        transform: translateY(-2px);
+      }
+
+      .btn-blue {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-blue:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
       }
 
       /* HERO */
@@ -494,29 +500,16 @@ const schedule = [
         gap: 12px;
       }
 
-      .btn {
+      .btn-outline {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 13px 23px;
+        border: 1px solid rgba(255, 255, 255, 0.65);
         border-radius: 5px;
+        color: white;
         font-weight: 800;
         transition: 0.25s ease;
-      }
-
-      .btn-primary {
-        background: var(--secondary);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        background: #d88708;
-        transform: translateY(-2px);
-      }
-
-      .btn-outline {
-        border: 1px solid rgba(255, 255, 255, 0.65);
-        color: white;
       }
 
       .btn-outline:hover {
@@ -607,10 +600,156 @@ const schedule = [
         font-weight: 600;
       }
 
+      /* WHO WE ARE */
+
+      .who-we-are {
+        background: white;
+      }
+
+      .who-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .who-image {
+        position: relative;
+      }
+
+      .who-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 9px;
+        box-shadow: var(--shadow);
+      }
+
+      .who-image-card {
+        position: absolute;
+        right: -20px;
+        bottom: -25px;
+        width: 260px;
+        padding: 24px;
+        border-radius: 8px;
+        background: var(--primary);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .who-image-card strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--secondary);
+        font-size: 1.6rem;
+      }
+
+      .who-image-card span {
+        font-size: 0.9rem;
+      }
+
+      .who-content .eyebrow {
+        margin-bottom: 8px;
+        color: var(--secondary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .who-content h2 {
+        margin-bottom: 21px;
+        color: var(--dark);
+        font-size: clamp(2.1rem, 4vw, 3.1rem);
+        line-height: 1.15;
+      }
+
+      .who-content p {
+        margin-bottom: 18px;
+      }
+
+      .who-highlight {
+        margin: 27px 0;
+        padding: 19px 20px;
+        border-left: 4px solid var(--secondary);
+        background: var(--light);
+        color: var(--dark);
+        font-size: 1.03rem;
+        font-weight: 700;
+      }
+
+      /* VISION / MISSION */
+
+      .vision-mission {
+        background: var(--light);
+      }
+
+      .vm-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .vm-card {
+        padding: 42px;
+        border-radius: 9px;
+        background: white;
+        box-shadow: var(--shadow);
+      }
+
+      .vm-card.mission {
+        background: var(--primary);
+        color: white;
+      }
+
+      .vm-label {
+        margin-bottom: 12px;
+        color: var(--secondary);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .vm-card h3 {
+        margin-bottom: 15px;
+        color: var(--dark);
+        font-size: 1.75rem;
+      }
+
+      .vm-card.mission h3 {
+        color: white;
+      }
+
+      .vm-card p {
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+
+      .vm-scripture {
+        max-width: 800px;
+        margin: 38px auto 0;
+        text-align: center;
+        color: var(--dark);
+        font-family: Georgia, serif;
+        font-size: 1.12rem;
+        font-style: italic;
+      }
+
+      .vm-scripture strong {
+        display: block;
+        margin-top: 6px;
+        color: var(--primary);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
+      }
+
       /* STORY */
 
       .story {
-        background: var(--light);
+        position: relative;
+        background: white;
       }
 
       .story-grid {
@@ -661,7 +800,7 @@ const schedule = [
         margin: 27px 0;
         padding: 22px 24px;
         border-radius: 7px;
-        background: white;
+        background: var(--light);
         box-shadow: 0 7px 25px rgba(16, 42, 67, 0.06);
       }
 
@@ -676,6 +815,67 @@ const schedule = [
       .scripture-box strong {
         color: var(--primary);
         font-size: 0.82rem;
+      }
+
+      /* REACH */
+
+      .reach {
+        background: var(--primary-dark);
+        color: white;
+      }
+
+      .reach .section-title h2,
+      .reach .section-title p {
+        color: white;
+      }
+
+      .reach-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .reach-card {
+        padding: 32px 25px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .reach-icon {
+        margin-bottom: 18px;
+        color: var(--secondary);
+        font-size: 2rem;
+      }
+
+      .reach-card h3 {
+        margin-bottom: 10px;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .reach-card p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.93rem;
+      }
+
+      .reach-scripture {
+        max-width: 800px;
+        margin: 45px auto 0;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+        font-family: Georgia, serif;
+        font-size: 1.15rem;
+        font-style: italic;
+      }
+
+      .reach-scripture strong {
+        display: block;
+        margin-top: 7px;
+        color: var(--secondary);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
       }
 
       /* VIDEO */
@@ -715,14 +915,6 @@ const schedule = [
         background: var(--light);
       }
 
-      .ministry-intro {
-        max-width: 760px;
-        margin: -25px auto 45px;
-        text-align: center;
-        color: var(--muted);
-        font-size: 1.04rem;
-      }
-
       .ministry-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -752,7 +944,7 @@ const schedule = [
         justify-content: center;
         margin-bottom: 20px;
         border-radius: 50%;
-        background: #edf5fb;
+        background: var(--soft-blue);
         font-size: 1.45rem;
       }
 
@@ -765,6 +957,125 @@ const schedule = [
       .ministry-card p {
         color: var(--muted);
         font-size: 0.95rem;
+      }
+
+      /* CHURCH PLANTING */
+
+      .planting {
+        background: white;
+      }
+
+      .planting-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .planting-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .planting-content .eyebrow,
+      .education-content .eyebrow {
+        margin-bottom: 8px;
+        color: var(--secondary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .planting-content h2,
+      .education-content h2 {
+        margin-bottom: 20px;
+        color: var(--dark);
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.15;
+      }
+
+      .planting-content p,
+      .education-content p {
+        margin-bottom: 18px;
+      }
+
+      .planting-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 28px 0;
+      }
+
+      .planting-stat {
+        padding: 20px;
+        border-radius: 7px;
+        background: var(--light);
+      }
+
+      .planting-stat strong {
+        display: block;
+        color: var(--primary);
+        font-size: 2rem;
+        line-height: 1.1;
+      }
+
+      .planting-stat span {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      /* DISCIPLESHIP */
+
+      .discipleship {
+        background: var(--light);
+      }
+
+      .discipleship-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .discipleship-card {
+        padding: 30px 24px;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 7px 25px rgba(16, 42, 67, 0.06);
+      }
+
+      .discipleship-card strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--primary);
+        font-size: 1.05rem;
+      }
+
+      .discipleship-card p {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .discipleship-quote {
+        max-width: 850px;
+        margin: 42px auto 0;
+        text-align: center;
+        color: var(--dark);
+        font-family: Georgia, serif;
+        font-size: 1.15rem;
+        font-style: italic;
+      }
+
+      .discipleship-quote strong {
+        display: block;
+        margin-top: 7px;
+        color: var(--primary);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
       }
 
       /* PASTOR */
@@ -826,6 +1137,22 @@ const schedule = [
       .qualification strong {
         display: block;
         color: var(--dark);
+      }
+
+      .pastor-scripture {
+        margin-top: 24px;
+        color: var(--dark);
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+
+      .pastor-scripture strong {
+        display: block;
+        margin-top: 5px;
+        color: var(--primary);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        font-style: normal;
       }
 
       /* FAMILY */
@@ -944,6 +1271,99 @@ const schedule = [
       .children-scripture strong {
         color: var(--primary);
         font-size: 0.8rem;
+      }
+
+      /* EDUCATION */
+
+      .education {
+        background: white;
+      }
+
+      .education-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .education-image img {
+        width: 100%;
+        height: 470px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .education-list {
+        display: grid;
+        gap: 13px;
+        margin: 25px 0;
+      }
+
+      .education-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .education-item span:first-child {
+        color: var(--secondary);
+        font-size: 1.2rem;
+      }
+
+      .education-item strong {
+        color: var(--dark);
+      }
+
+      .education-quote {
+        margin-top: 25px;
+        padding: 20px;
+        border-left: 4px solid var(--secondary);
+        background: var(--light);
+        color: var(--dark);
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+
+      /* PROFILE GALLERY */
+
+      .profile-gallery {
+        background: var(--light);
+      }
+
+      .profile-photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .profile-photo-card {
+        overflow: hidden;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 7px 25px rgba(16, 42, 67, 0.07);
+      }
+
+      .profile-photo-card img {
+        display: block;
+        width: 100%;
+        height: 245px;
+        object-fit: cover;
+      }
+
+      .profile-photo-card div {
+        padding: 20px;
+      }
+
+      .profile-photo-card h3 {
+        margin-bottom: 6px;
+        color: var(--dark);
+        font-size: 1.05rem;
+      }
+
+      .profile-photo-card p {
+        color: var(--muted);
+        font-size: 0.88rem;
       }
 
       /* SCHEDULE */
@@ -1164,6 +1584,13 @@ const schedule = [
         color: var(--secondary);
       }
 
+      .footer-scripture {
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.85);
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+
       .copyright {
         padding-top: 22px;
         text-align: center;
@@ -1173,20 +1600,17 @@ const schedule = [
       /* RESPONSIVE */
 
       @media (max-width: 1050px) {
-        nav {
-          gap: 13px;
-        }
-
-        nav a {
-          font-size: 0.8rem;
-        }
-
         .hero-copy {
           width: 53%;
         }
 
         .hero-image {
           width: 50%;
+        }
+
+        .reach-grid,
+        .discipleship-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .ministry-grid {
@@ -1201,29 +1625,7 @@ const schedule = [
       @media (max-width: 760px) {
         .section {
           padding: 75px 0;
-        }
-
-        header {
-          position: relative;
-        }
-
-        .nav {
-          min-height: auto;
-          padding: 12px 0;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 12px;
-        }
-
-        nav {
-          width: 100%;
-          gap: 17px;
-          overflow-x: auto;
-          padding-bottom: 5px;
-        }
-
-        nav a {
-          white-space: nowrap;
+          scroll-margin-top: 25px;
         }
 
         .hero {
@@ -1279,19 +1681,32 @@ const schedule = [
           margin-top: 25px;
         }
 
+        .who-grid,
+        .vm-grid,
         .story-grid,
+        .planting-grid,
         .pastor-grid,
         .children-grid,
+        .education-grid,
         .contact-grid,
         .family-grid {
           grid-template-columns: 1fr;
         }
 
-        .story-grid {
+        .who-grid,
+        .story-grid,
+        .planting-grid,
+        .education-grid {
           gap: 45px;
         }
 
-        .story-image img {
+        .who-image-card {
+          right: 15px;
+        }
+
+        .story-image img,
+        .planting-image img,
+        .education-image img {
           height: 390px;
         }
 
@@ -1308,7 +1723,13 @@ const schedule = [
           height: 360px;
         }
 
+        .reach-grid,
+        .discipleship-grid,
         .ministry-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-photo-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1344,19 +1765,6 @@ const schedule = [
       }
 
       @media (max-width: 480px) {
-        .brand img {
-          width: 54px;
-          height: 54px;
-        }
-
-        .brand-text strong {
-          font-size: 0.92rem;
-        }
-
-        .brand-text small {
-          font-size: 0.68rem;
-        }
-
         .hero {
           min-height: 730px;
         }
@@ -1391,6 +1799,14 @@ const schedule = [
           font-size: 1.8rem;
         }
 
+        .vm-card {
+          padding: 30px 24px;
+        }
+
+        .planting-stats {
+          grid-template-columns: 1fr;
+        }
+
         .gallery-grid {
           gap: 8px;
         }
@@ -1404,38 +1820,8 @@ const schedule = [
 
   <body>
 
-    <!-- HEADER -->
-
-    <header>
-      <div class="container nav">
-
-        <a href="/" class="brand">
-
-          <img
-            src="/images/community-baptist-church-south-sudan-final-logo.png"
-            alt="Community Baptist Church South Sudan logo"
-          />
-
-          <div class="brand-text">
-            <strong>Community Baptist Church</strong>
-            <small>South Sudan</small>
-          </div>
-
-        </a>
-
-        <nav>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#ministries">Ministries</a>
-          <a href="#pastor">Pastor</a>
-          <a href="#schedule">Schedule</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact" class="nav-donate">Support Us</a>
-        </nav>
-
-      </div>
-    </header>
+    <!-- NEW REUSABLE HEADER -->
+    <Header />
 
 
     <!-- HERO -->
@@ -1479,11 +1865,11 @@ const schedule = [
 
               <div class="hero-buttons">
 
-                <a href="#about" class="btn btn-primary">
+                <a href="#our-story" class="btn btn-primary">
                   Discover Our Story
                 </a>
 
-                <a href="#contact" class="btn btn-outline">
+                <a href="#contact" class="btn-outline">
                   Worship With Us
                 </a>
 
@@ -1541,7 +1927,7 @@ const schedule = [
 
           <div class="stat">
             <strong>2014</strong>
-            <span>Church Founded</span>
+            <span>Church Began</span>
           </div>
 
           <div class="stat">
@@ -1566,9 +1952,161 @@ const schedule = [
     </section>
 
 
-    <!-- OUR STORY -->
+    <!-- WHO WE ARE -->
 
-    <section class="story section" id="about">
+    <section class="who-we-are section" id="who-we-are">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Who We Are</span>
+
+          <h2>A People Brought Together by God</h2>
+
+          <p>
+            We are a community of believers seeking to love God, serve one
+            another and make Christ known.
+          </p>
+
+        </div>
+
+        <div class="who-grid">
+
+          <div class="who-image">
+
+            <img
+              src="/images/cbc-profile-photo-02.jpg"
+              alt="Community Baptist Church South Sudan community gathering"
+              loading="lazy"
+            />
+
+            <div class="who-image-card">
+
+              <strong>One Family</strong>
+
+              <span>
+                United by faith, strengthened by God's Word and called to
+                serve.
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="who-content">
+
+            <div class="eyebrow">Our Identity</div>
+
+            <h2>Rooted in Christ. Sent to Serve.</h2>
+
+            <p>
+              Community Baptist Church South Sudan is a collective of people
+              brought together by God, sharing a desire to love and serve in
+              His name.
+            </p>
+
+            <p>
+              We are grateful for God's abundant blessings and look ahead
+              with faith, trusting Him to guide the path before us.
+            </p>
+
+            <p>
+              The Bible stands at the centre of our life together. We believe
+              that God's Word is foundational to both individual and church
+              growth, shaping what we believe, how we live and how we serve.
+            </p>
+
+            <div class="who-highlight">
+              We do not exist simply to gather within our walls. We exist to
+              know Christ, grow in Christ and carry the hope of Christ to
+              others.
+            </div>
+
+            <p>
+              Empowered by the Holy Spirit, we seek to embrace the work God
+              has entrusted to His people and to engage those in our
+              communities who have yet to know Jesus as Lord and Saviour.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISION AND MISSION -->
+
+    <section class="vision-mission section" id="vision-mission">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Our Calling</span>
+
+          <h2>Vision & Mission</h2>
+
+          <p>
+            Everything we do flows from our desire to see the truth of Jesus
+            Christ transform lives and communities.
+          </p>
+
+        </div>
+
+        <div class="vm-grid">
+
+          <div class="vm-card">
+
+            <div class="vm-label">Our Vision</div>
+
+            <h3>Transforming Our Community</h3>
+
+            <p>
+              Our vision is to transform our community by sharing the truth
+              of Jesus Christ.
+            </p>
+
+          </div>
+
+          <div class="vm-card mission">
+
+            <div class="vm-label">Our Mission</div>
+
+            <h3>Sharing Christ Beyond Our Walls</h3>
+
+            <p>
+              As a people transformed by the Holy Spirit, our mission is to
+              share Christ in our neighborhoods, surrounding communities,
+              and out to the whole world.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="vm-scripture">
+
+          “But ye shall receive power, after that the Holy Ghost is come
+          upon you: and ye shall be witnesses unto me...”
+
+          <strong>Acts 1:8</strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OUR STORY / JOURNEY -->
+
+    <section class="story section" id="our-story">
+
+      <span id="our-journey" class="anchor-target"></span>
 
       <div class="container">
 
@@ -1579,64 +2117,113 @@ const schedule = [
             <img
               src="/images/cbc-photo-01.jpg"
               alt="Community Baptist Church South Sudan"
+              loading="lazy"
             />
 
           </div>
 
           <div class="story-content">
 
-            <div class="eyebrow">Our Story</div>
+            <div class="eyebrow">Our Journey</div>
 
-            <h2>From a Home Cell to a Growing Church Family</h2>
+            <h2>From a Home Fellowship to a Growing Church Family</h2>
 
             <p>
-              Community Baptist Church South Sudan began on
-              <strong>23 November 2014</strong>, when Pastor David Lual
-              Mawien started a home cell in Ayaung village, Aweil,
-              Northern Bahr el Ghazal State.
+              On <strong>23 November 2014</strong>, Community Baptist Church
+              South Sudan began as a home fellowship in Ayaung village,
+              Aweil, Northern Bahr el Ghazal State.
             </p>
 
             <p>
-              What began as a small gathering of believers has, by God's
-              grace, grown into a church family of approximately
+              What began as a gathering of believers has, by God's grace,
+              grown into a church family of approximately
               <strong>500 members</strong>.
             </p>
 
             <div class="story-highlight">
-              From a home cell in Ayaung to a growing family of believers
-              serving communities across the Bahr el Ghazal region.
+              Our journey is more than a story of numbers. It is a testimony
+              of God's faithfulness and of ordinary people responding to His
+              call to love, serve, witness and make disciples.
             </div>
 
             <p>
-              CBC's journey has also extended beyond its original
-              congregation. Through the ministry, <strong>26 sister
-              churches</strong> have been established, carrying the
-              fellowship and witness of the church into other communities.
+              As the church has grown, its ministry has also reached beyond
+              the original congregation. Today, CBC has
+              <strong>26 sister churches</strong>, extending the witness of
+              the Church into other communities.
             </p>
 
             <p>
-              As we look ahead, CBC carries a vision to reach
-              <strong>100 churches in the next 10 years</strong>, trusting
-              God for wisdom, strength and faithful people to serve His
-              purposes.
+              We look toward the future with a vision to reach
+              <strong>100 churches</strong> in the years ahead, trusting God
+              to provide wisdom, strength and faithful servants for the work
+              He has prepared.
             </p>
 
             <div class="scripture-box">
 
               <p>
-                “Except the LORD build the house, they labour in vain that
-                build it.”
+                “I planted, Apollos watered; but God gave the increase.”
               </p>
 
-              <strong>Psalm 127:1</strong>
+              <strong>1 Corinthians 3:6</strong>
 
             </div>
 
-            <a href="#ministries" class="btn btn-primary">
-              Explore Our Ministries
-            </a>
-
           </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REACHING COMMUNITIES -->
+
+    <section class="reach section" id="reaching-communities">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Our Mission in Action</span>
+
+          <h2>Growing by Reaching Others</h2>
+
+          <p>
+            We believe the Gospel is not meant to stop at the church doors.
+            God calls His people outward — into neighborhoods, communities
+            and the wider world.
+          </p>
+
+        </div>
+
+        <div class="reach-grid">
+
+          {ministryFocus.map((item) => (
+
+            <div class="reach-card">
+
+              <div class="reach-icon">
+                {item.icon}
+              </div>
+
+              <h3>{item.title}</h3>
+
+              <p>{item.text}</p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <div class="reach-scripture">
+
+          “Go ye therefore, and teach all nations...”
+
+          <strong>Matthew 28:19</strong>
 
         </div>
 
@@ -1685,9 +2272,12 @@ const schedule = [
         </div>
 
         <p class="video-caption">
+
           “O come, let us sing unto the LORD: let us make a joyful noise
           to the rock of our salvation.”
+
           <strong>Psalm 95:1</strong>
+
         </p>
 
       </div>
@@ -1708,17 +2298,12 @@ const schedule = [
           <h2>Our Ministries</h2>
 
           <p>
-            At CBC, church is more than a Sunday gathering. We create
+            At CBC, church is more than a weekly gathering. We create
             opportunities for people of different ages to worship, learn,
             pray, fellowship and serve.
           </p>
 
         </div>
-
-        <p class="ministry-intro">
-          Through God's Word, Christian fellowship and prayer, we seek to
-          build a church family that grows together and serves faithfully.
-        </p>
 
         <div class="ministry-grid">
 
@@ -1745,6 +2330,163 @@ const schedule = [
     </section>
 
 
+    <!-- CHURCH PLANTING -->
+
+    <section class="planting section" id="church-planting">
+
+      <div class="container">
+
+        <div class="planting-grid">
+
+          <div class="planting-image">
+
+            <img
+              src="/images/cbc-profile-photo-04.jpg"
+              alt="Young people and church community members"
+              loading="lazy"
+            />
+
+          </div>
+
+          <div class="planting-content">
+
+            <div class="eyebrow">Church Planting & Outreach</div>
+
+            <h2>The Gospel Keeps Moving</h2>
+
+            <p>
+              CBC's heart for mission reaches beyond the congregation in
+              Aweil. We desire to see the Gospel carried into new places
+              through evangelism, discipleship, outreach and the planting of
+              churches.
+            </p>
+
+            <p>
+              The church profile records a history of establishing new
+              churches and outreach points in different locations. That
+              commitment continues as we seek to make disciples and serve
+              communities throughout South Sudan.
+            </p>
+
+            <div class="planting-stats">
+
+              <div class="planting-stat">
+
+                <strong>26</strong>
+
+                <span>Sister churches today</span>
+
+              </div>
+
+              <div class="planting-stat">
+
+                <strong>100</strong>
+
+                <span>Churches in our future vision</span>
+
+              </div>
+
+            </div>
+
+            <div class="scripture-box">
+
+              <p>
+                “The field is the world.”
+              </p>
+
+              <strong>Matthew 13:38</strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DISCIPLESHIP -->
+
+    <section class="discipleship section" id="spiritual-growth">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Spiritual Growth</span>
+
+          <h2>Rooted in the Word. Strengthened in Prayer.</h2>
+
+          <p>
+            We believe a growing church must first be a growing people.
+          </p>
+
+        </div>
+
+        <div class="discipleship-grid">
+
+          <div class="discipleship-card">
+
+            <strong>God's Word</strong>
+
+            <p>
+              Biblical teaching remains at the centre of our individual and
+              church growth.
+            </p>
+
+          </div>
+
+          <div class="discipleship-card">
+
+            <strong>Prayer</strong>
+
+            <p>
+              We seek God together for healing, protection, wisdom,
+              intervention and direction.
+            </p>
+
+          </div>
+
+          <div class="discipleship-card">
+
+            <strong>Discipleship</strong>
+
+            <p>
+              We encourage believers to mature in Christ and become faithful
+              servants.
+            </p>
+
+          </div>
+
+          <div class="discipleship-card">
+
+            <strong>Evangelism</strong>
+
+            <p>
+              We seek opportunities to share the Gospel, counsel others and
+              reach people beyond our walls.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="discipleship-quote">
+
+          “But grow in grace, and in the knowledge of our Lord and Saviour
+          Jesus Christ.”
+
+          <strong>2 Peter 3:18</strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
     <!-- PASTOR -->
 
     <section class="pastor section" id="pastor">
@@ -1758,8 +2500,8 @@ const schedule = [
           <h2>Meet Our Pastor</h2>
 
           <p>
-            Serving God's people through the ministry of His Word,
-            fellowship and Christian leadership.
+            Serving God's people through the ministry of His Word, pastoral
+            oversight and Christian leadership.
           </p>
 
         </div>
@@ -1771,6 +2513,7 @@ const schedule = [
             <img
               src="/images/cbc-photo-03.jpg"
               alt="Pastor David Lual Mawien"
+              loading="lazy"
             />
 
           </div>
@@ -1786,21 +2529,21 @@ const schedule = [
             </div>
 
             <p>
-              Pastor David Lual Mawien is the founder and pastor of
-              Community Baptist Church South Sudan.
+              Pastor David Lual Mawien has served as a pastor since
+              <strong>2011</strong> and provides pastoral leadership and
+              oversight to the CBC church family.
             </p>
 
             <p>
-              He became a pastor in <strong>2011</strong> and holds a
-              Bachelor's degree in Theology from
+              He holds a <strong>Bachelor's degree in Theology</strong> from
               <strong>Global Theological Seminary</strong>.
             </p>
 
             <p>
-              Pastor David also leads <strong>Community Network
-              Ministries</strong>. Since the beginning of CBC in 2014, he
-              has continued to lead the church as it grows in Aweil and
-              extends its ministry through sister churches.
+              Pastor David also leads
+              <strong>Community Network Ministries</strong>. He serves
+              alongside other pastors, ministry leaders and servants who
+              contribute to the life and mission of the wider church family.
             </p>
 
             <div class="qualification">
@@ -1808,6 +2551,15 @@ const schedule = [
               <strong>Bachelor's Degree in Theology</strong>
 
               Global Theological Seminary
+
+            </div>
+
+            <div class="pastor-scripture">
+
+              “Moreover it is required in stewards, that a man be found
+              faithful.”
+
+              <strong>1 Corinthians 4:2</strong>
 
             </div>
 
@@ -1820,9 +2572,11 @@ const schedule = [
     </section>
 
 
-    <!-- CHURCH FAMILY -->
+    <!-- CHURCH FAMILY / FUTURE DIRECTION -->
 
-    <section class="family section">
+    <section class="family section" id="church-family">
+
+      <span id="future-direction" class="anchor-target"></span>
 
       <div class="container">
 
@@ -1833,8 +2587,8 @@ const schedule = [
           <h2>One Church Family, Many Communities</h2>
 
           <p>
-            The story of CBC is a story of faith, fellowship, multiplication
-            and a continuing desire to reach more communities.
+            The story of CBC continues as the Gospel reaches people and
+            communities beyond the original congregation.
           </p>
 
         </div>
@@ -1849,8 +2603,8 @@ const schedule = [
 
             <p>
               What began in Ayaung has grown beyond one congregation.
-              CBC has helped establish 26 sister churches as the ministry
-              has expanded into other communities.
+              CBC now has 26 sister churches as the ministry continues to
+              reach other communities.
             </p>
 
           </div>
@@ -1859,7 +2613,7 @@ const schedule = [
 
             <strong>100</strong>
 
-            <h3>A Vision for the Next 10 Years</h3>
+            <h3>A Vision for the Future</h3>
 
             <p>
               CBC looks toward the coming years with a vision to reach
@@ -1887,7 +2641,7 @@ const schedule = [
 
     <!-- CHILDREN & YOUNG PEOPLE -->
 
-    <section class="children section">
+    <section class="children section" id="children">
 
       <div class="container">
 
@@ -1896,8 +2650,9 @@ const schedule = [
           <div class="children-image">
 
             <img
-              src="/images/cbc-photo-07.jpg"
-              alt="Children and young people at Community Baptist Church South Sudan"
+              src="/images/cbc-profile-photo-05.jpg"
+              alt="Children and young people"
+              loading="lazy"
             />
 
           </div>
@@ -1913,16 +2668,21 @@ const schedule = [
             </div>
 
             <p>
-              Children and young people are an important part of the CBC
-              family. We want them to have opportunities to learn, grow,
-              worship and develop their relationship with Christ.
+              Children and young people are a fundamental part of the CBC
+              family. We believe they are not simply the Church of tomorrow.
+              They are part of the Church today.
             </p>
 
             <p>
-              Through Sunday School, teenagers' fellowship and youth
-              activities, we encourage the younger generation to discover
-              their gifts, build healthy Christian relationships and take
-              their place in the life of the church.
+              From infants in the crèche through young people up to
+              18 years old, we desire to provide age-specific opportunities
+              for teaching, fellowship, worship and spiritual growth.
+            </p>
+
+            <p>
+              Our prayer is to see a generation that knows Christ, loves His
+              Word, serves His people and carries the Gospel with courage
+              into its own generation.
             </p>
 
             <div class="children-scripture">
@@ -1936,7 +2696,7 @@ const schedule = [
 
             </div>
 
-            <a href="#schedule" class="btn btn-primary">
+            <a href="#weekly-programme" class="btn btn-primary">
               See Our Weekly Programme
             </a>
 
@@ -1949,9 +2709,155 @@ const schedule = [
     </section>
 
 
+    <!-- EDUCATION -->
+
+    <section class="education section" id="education">
+
+      <div class="container">
+
+        <div class="education-grid">
+
+          <div class="education-content">
+
+            <div class="eyebrow">Education & Community Development</div>
+
+            <h2>Building Futures Through Education</h2>
+
+            <p>
+              CBC believes education can strengthen individuals, families
+              and communities. Our vision therefore reaches beyond church
+              services to the development of opportunities that can equip
+              people for life and service.
+            </p>
+
+            <p>
+              The church hopes one day to establish educational institutions
+              that can serve both the Church and the wider community.
+            </p>
+
+            <div class="education-list">
+
+              <div class="education-item">
+                <span>✓</span>
+                <div>
+                  <strong>Primary Education</strong><br />
+                  Opportunities that give children a strong foundation for
+                  learning.
+                </div>
+              </div>
+
+              <div class="education-item">
+                <span>✓</span>
+                <div>
+                  <strong>Secondary Education</strong><br />
+                  Helping young people continue their education and develop
+                  their potential.
+                </div>
+              </div>
+
+              <div class="education-item">
+                <span>✓</span>
+                <div>
+                  <strong>Vocational Training</strong><br />
+                  Practical skills that can help people build productive
+                  futures.
+                </div>
+              </div>
+
+              <div class="education-item">
+                <span>✓</span>
+                <div>
+                  <strong>Bible Education</strong><br />
+                  Strengthening believers through deeper understanding of
+                  God's Word.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="education-quote">
+
+              “Wisdom is the principal thing; therefore get wisdom: and with
+              all thy getting get understanding.”
+
+              <br /><br />
+
+              <strong>Proverbs 4:7</strong>
+
+            </div>
+
+          </div>
+
+          <div class="education-image">
+
+            <img
+              src="/images/cbc-profile-photo-06.jpg"
+              alt="Children and community members"
+              loading="lazy"
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROFILE PHOTOS -->
+
+    <section class="profile-gallery section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>From Our Church Profile</span>
+
+          <h2>Faith in Community</h2>
+
+          <p>
+            These moments reflect the people, fellowship and community
+            engagement that are part of the CBC story.
+          </p>
+
+        </div>
+
+        <div class="profile-photo-grid">
+
+          {profilePhotos.map((photo) => (
+
+            <div class="profile-photo-card">
+
+              <img
+                src={photo.image}
+                alt={photo.title}
+                loading="lazy"
+              />
+
+              <div>
+
+                <h3>{photo.title}</h3>
+
+                <p>{photo.text}</p>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
     <!-- WEEKLY PROGRAMME -->
 
-    <section class="schedule section" id="schedule">
+    <section class="schedule section" id="weekly-programme">
 
       <div class="container">
 
@@ -1962,9 +2868,9 @@ const schedule = [
           <h2>Weekly Programme</h2>
 
           <p>
-            We welcome you to join us throughout the week for worship,
-            Bible study, prayer, fellowship and activities for different
-            groups within our church family.
+            We welcome you throughout the week for worship, Bible study,
+            prayer, fellowship and activities for different groups within
+            our church family.
           </p>
 
         </div>
@@ -1996,9 +2902,17 @@ const schedule = [
         </div>
 
         <p class="schedule-note">
+
+          The wider ministry of CBC also includes prayer, discipleship,
+          evangelism, counseling and community engagement.
+
+          <br /><br />
+
           “Let us consider one another to provoke unto love and to good
           works: not forsaking the assembling of ourselves together.”
+
           <strong>Hebrews 10:24–25</strong>
+
         </p>
 
       </div>
@@ -2064,13 +2978,13 @@ const schedule = [
 
             <p>
               Whether you are looking for a church family, seeking God's
-              direction, or simply longing for a place to worship and
-              fellowship, Community Baptist Church South Sudan welcomes
-              you.
+              direction, or longing for a place to worship and fellowship,
+              Community Baptist Church South Sudan welcomes you.
             </p>
 
             <p>
               Come as you are. Worship with us. Grow with us. Serve with us.
+              Together, let us seek Christ and make His name known.
             </p>
 
             <div class="contact-scripture">
@@ -2197,9 +3111,16 @@ const schedule = [
             </div>
 
             <p style="margin-top:20px;">
-              Growing in faith, serving in love and reaching communities
-              from Aweil and beyond.
+              A people brought together by God to love and serve in His name,
+              rooted in His Word and called to share Christ with our
+              communities and beyond.
             </p>
+
+            <div class="footer-scripture">
+
+              “To God be the glory, great things He hath done.”
+
+            </div>
 
           </div>
 
@@ -2210,10 +3131,12 @@ const schedule = [
 
             <div class="footer-links">
 
-              <a href="#about">Our Story</a>
+              <a href="#who-we-are">Who We Are</a>
+              <a href="#our-story">Our Story</a>
+              <a href="#vision-mission">Vision & Mission</a>
               <a href="#ministries">Ministries</a>
               <a href="#pastor">Our Pastor</a>
-              <a href="#schedule">Weekly Programme</a>
+              <a href="#weekly-programme">Weekly Programme</a>
               <a href="#gallery">Gallery</a>
               <a href="#contact">Contact Us</a>
 
