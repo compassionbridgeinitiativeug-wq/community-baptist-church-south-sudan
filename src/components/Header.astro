@@ -7,6 +7,7 @@
         src="/images/community-baptist-church-south-sudan-final-logo.png"
         alt="Community Baptist Church South Sudan logo"
       />
+
       <span class="brand-name">
         Community Baptist Church
         <small>South Sudan</small>
@@ -20,7 +21,9 @@
 
       <!-- ABOUT -->
       <details class="dropdown">
-        <summary>About <span class="arrow">⌄</span></summary>
+        <summary>
+          About <span class="arrow">⌄</span>
+        </summary>
 
         <div class="dropdown-menu">
           <a href="#who-we-are">Who We Are</a>
@@ -33,7 +36,9 @@
 
       <!-- MINISTRIES -->
       <details class="dropdown">
-        <summary>Ministries <span class="arrow">⌄</span></summary>
+        <summary>
+          Ministries <span class="arrow">⌄</span>
+        </summary>
 
         <div class="dropdown-menu">
           <a href="#ministries">Our Ministries</a>
@@ -46,7 +51,9 @@
 
       <!-- CHURCH LIFE -->
       <details class="dropdown">
-        <summary>Church Life <span class="arrow">⌄</span></summary>
+        <summary>
+          Church Life <span class="arrow">⌄</span>
+        </summary>
 
         <div class="dropdown-menu">
           <a href="#church-family">Our Church Family</a>
@@ -65,6 +72,36 @@
     </nav>
   </div>
 </header>
+
+
+<!-- Dropdown behavior -->
+<script>
+  const dropdowns = document.querySelectorAll<HTMLDetailsElement>(".dropdown");
+
+  dropdowns.forEach((dropdown) => {
+
+    const summary = dropdown.querySelector("summary");
+    const links = dropdown.querySelectorAll<HTMLAnchorElement>(".dropdown-menu a");
+
+    // When one dropdown opens, close the others
+    summary?.addEventListener("click", () => {
+      dropdowns.forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) {
+          otherDropdown.open = false;
+        }
+      });
+    });
+
+    // When an item is selected, close the dropdown automatically
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        dropdown.open = false;
+      });
+    });
+
+  });
+</script>
+
 
 <style>
   .site-header {
